@@ -25,6 +25,9 @@
   border: none;
   color: #2b3566;
 }
+.search_container input {
+  width: 16rem;
+}
 
 .search_container button {
   background-color: #0e1129;

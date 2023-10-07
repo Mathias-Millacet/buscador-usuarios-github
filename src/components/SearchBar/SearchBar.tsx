@@ -1,32 +1,34 @@
-type SearchProps = {
-  loadUser: (userName: string) => Promise<void>;
-};
-
-import { useState, KeyboardEvent } from "react";
+import { KeyboardEvent } from "react";
 
 import Button from "@material-ui/core/Button";
-import classes from "./Search.module.css";
+import classes from "./SearchBar.module.css";
+import { useSearch } from "../../provider/SearchContext";
 
-const Search = ({ loadUser }: SearchProps) => {
-  const [userName, setUserName] = useState("");
+type SearchProps = {
+  searchHandler: (userName: string) => Promise<void>;
+};
+
+const Search = ({ searchHandler }: SearchProps) => {
+  const { searchWord, setSearchWord } = useSearch();
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === "Enter") {
-      loadUser(userName);
+      searchHandler(searchWord);
     }
   };
   return (
     <div className={classes.search}>
-      <h2>Buscar por usuario</h2>
+      <h2>Buscar por usuario/repositorio</h2>
       <div className={classes.search_container}>
         <input
           type="text"
           placeholder="Ingrese nombre de usuario o repositorio"
-          onChange={(e) => setUserName(e.target.value)}
+          value={searchWord}
+          onChange={(e) => setSearchWord(e.target.value)}
           onKeyDown={handleKeyDown}
         />
         <Button
-          onClick={() => loadUser(userName)}
+          onClick={() => searchHandler(searchWord)}
           size="small"
           variant="contained"
           color="primary"

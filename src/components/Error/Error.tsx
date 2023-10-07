@@ -1,4 +1,4 @@
-const ErrorUser = () => {
+const Error = () => {
   return (
     <div>
       <p>Usuario no encontrado</p>
@@ -6,4 +6,4 @@ const ErrorUser = () => {
   );
 };
 
-export default ErrorUser;
+export default Error;

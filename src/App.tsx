@@ -1,13 +1,23 @@
-import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 
 import classes from "./App.module.css";
+import { SearchProvider } from "./provider/SearchContext";
+import Router from "./router/Router";
 
 function App() {
   return (
-    <div className={classes.app}>
-      <h1>Github</h1>
-      <Outlet />
-    </div>
+    <SearchProvider>
+      <div className={classes.app}>
+        <img
+          className={classes.logo}
+          src="/images/Logo-github.png"
+          alt="Logo de GitHub"
+        />
+
+        <h1>Github</h1>
+        <Router />
+      </div>
+    </SearchProvider>
   );
 }
 
