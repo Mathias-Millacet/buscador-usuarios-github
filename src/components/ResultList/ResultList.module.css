@@ -17,12 +17,12 @@ li {
   padding: 5px;
 }
 
-.listaUsers ul {
-  overflow: scroll;
+.listaUsers {
+  overflow: auto;
   height: 160px;
 }
 
 .listaRepos {
-  overflow: scroll;
+  overflow: auto;
   height: 160px;
 }

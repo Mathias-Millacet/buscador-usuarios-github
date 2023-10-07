@@ -32,4 +32,10 @@
 .search_container button {
   background-color: #0e1129;
   cursor: pointer;
+  transition-duration: 0.4;
+  color: white;
+}
+button:hover {
+  background-color: #4caf50;
+  color: white;
 }

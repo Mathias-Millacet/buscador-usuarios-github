@@ -1,6 +1,5 @@
 import { KeyboardEvent } from "react";
 
-import Button from "@material-ui/core/Button";
 import classes from "./SearchBar.module.css";
 import { useSearch } from "../../provider/SearchContext";
 
@@ -27,14 +26,7 @@ const Search = ({ searchHandler }: SearchProps) => {
           onChange={(e) => setSearchWord(e.target.value)}
           onKeyDown={handleKeyDown}
         />
-        <Button
-          onClick={() => searchHandler(searchWord)}
-          size="small"
-          variant="contained"
-          color="primary"
-        >
-          Buscar
-        </Button>
+        <button onClick={() => searchHandler(searchWord)}>Buscar</button>
       </div>
     </div>
   );
