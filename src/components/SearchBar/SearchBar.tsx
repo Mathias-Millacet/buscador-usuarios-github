@@ -26,7 +26,11 @@ const Search = ({ searchHandler }: SearchProps) => {
           onChange={(e) => setSearchWord(e.target.value)}
           onKeyDown={handleKeyDown}
         />
-        <button onClick={() => searchHandler(searchWord)}>Buscar</button>
+        <button
+          onClick={() => searchHandler(searchWord)}
+        >
+          Buscar
+        </button>
       </div>
     </div>
   );

@@ -30,12 +30,14 @@
 }
 
 .search_container button {
-  background-color: #0e1129;
+  background-color: #001b26;
   cursor: pointer;
-  transition-duration: 0.4;
+  transition-duration: 0.4s;
   color: white;
 }
+
+
 button:hover {
-  background-color: #4caf50;
+  background-color: #4CAF50; /* Green */
   color: white;
 }

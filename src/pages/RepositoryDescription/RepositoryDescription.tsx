@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { getRepositoryInformation } from "../../api/github";
 import { ReposityProps } from "../../types/repository";
 import RepositoryCard from "../../components/RepositoryCard/RepositoryCard";
+import { GoBackArrow } from "../../components/GoBackArrow/GoBackArrow";
 
 const RepositoryDescription = () => {
   const [repositoryInformation, setRepositoryInformation] =
@@ -21,6 +22,7 @@ const RepositoryDescription = () => {
 
   return (
     <>
+      <GoBackArrow />
       {repositoryInformation && <RepositoryCard {...repositoryInformation} />}
     </>
   );

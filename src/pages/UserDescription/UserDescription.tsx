@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getUserInformation } from "../../api/github";
 import { UserProps } from "../../types/user";
 import UserCard from "../../components/UserCard/UserCard";
+import { GoBackArrow } from "../../components/GoBackArrow/GoBackArrow";
 
 const UserDescription = () => {
   const [user, setUser] = useState<UserProps | null>(null);
@@ -16,7 +17,12 @@ const UserDescription = () => {
     getUser();
   }, [userName]);
 
-  return <>{user && <UserCard {...user} />}</>;
+  return (
+    <>
+      <GoBackArrow />
+      {user && <UserCard {...user} />}
+    </>
+  );
 };
 
 export default UserDescription;

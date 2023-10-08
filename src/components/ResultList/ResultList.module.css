@@ -17,12 +17,18 @@ li {
   padding: 5px;
 }
 
-.listaUsers {
+.listContainer {
   overflow: auto;
   height: 160px;
 }
 
-.listaRepos {
-  overflow: auto;
-  height: 160px;
+.listItem {
+  cursor: pointer;
+  border-bottom: 1px solid grey;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.listItem:hover {
+  opacity: 0.4;
 }

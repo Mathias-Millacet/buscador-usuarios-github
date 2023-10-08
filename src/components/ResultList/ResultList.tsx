@@ -22,34 +22,34 @@ const ResultList: FC<ResultListProp> = ({ users, repositories }) => {
   return (
     <div className={classes.results}>
       {users?.length > 0 && <h3>Usuarios</h3>}
-      <ul className={classes.listaUsers}>
+      <div className={classes.listContainer}>
         {users?.map((user: UserProps) => (
-          <li
-            style={{ cursor: "pointer" }}
+          <div
+            className={classes.listItem}
             onClick={() => handleRedirectUser(user?.login)}
             key={user?.id}
           >
-            Name: {user?.login}
-          </li>
+            {user?.login}
+          </div>
         ))}
-      </ul>
+      </div>
       {repositories?.length > 0 && (
         <h3>
           Repositorios
           <br />
         </h3>
       )}
-      <ul className={classes.listaRepos}>
+      <div className={classes.listContainer}>
         {repositories?.map((repository: ReposityProps) => (
-          <li
-            style={{ cursor: "pointer" }}
+          <div
+            className={classes.listItem}
             onClick={() => handleRedirectRepository(repository?.url)}
             key={repository?.id}
           >
-            Name: {repository?.name}
-          </li>
+            {repository?.name}
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
