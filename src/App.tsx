@@ -10,7 +10,7 @@ function App() {
       <div className={classes.app}>
         <img
           className={classes.logo}
-          src="/images/Logo-github.png"
+          src="/images/github-icons-logo-white.png"
           alt="Logo de GitHub"
         />
 
