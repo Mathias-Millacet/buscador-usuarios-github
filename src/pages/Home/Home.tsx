@@ -1,5 +1,5 @@
 import SearchBar from "../../components/SearchBar/SearchBar";
-import ErrorUser from "../../components/Error/Error";
+
 import { UserProps } from "../../types/user";
 import { useState } from "react";
 import User from "../../components/UserCard/UserCard";
@@ -10,10 +10,8 @@ import { useSearch } from "../../provider/SearchContext";
 const Home = () => {
   const [user, setUser] = useState<UserProps | null>(null);
   const { results, setResults } = useSearch();
-  const [error, setError] = useState(false);
 
   const searchHandler = async (searchWord: string) => {
-    setError(false);
     setUser(null);
 
     const data = await searchByUserAndRepository(searchWord);
@@ -33,7 +31,6 @@ const Home = () => {
         <ResultList users={results.users} repositories={results.repositories} />
       )}
       {user && <User {...user} />}
-      {error && <ErrorUser />}
     </div>
   );
 };

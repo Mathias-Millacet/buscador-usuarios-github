@@ -9,14 +9,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/user/:userName" element={<UserDescription />} />
-        <Route
-          path="/repository"
-          element={<RepositoryDescription />}
-        />
-        {/*         <Route path="messages" element={<DashboardMessages />} />
-        <Route path="tasks" element={<DashboardTasks />} />
-      </Route>
-      <Route path="about" element={<AboutPage />} /> */}
+        <Route path="/repository" element={<RepositoryDescription />} />
       </Routes>
     </BrowserRouter>
   );
