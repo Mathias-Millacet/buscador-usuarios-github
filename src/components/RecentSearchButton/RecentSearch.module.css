@@ -1,0 +1,8 @@
+.link {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.link:hover {
+  opacity: 0.4;
+}

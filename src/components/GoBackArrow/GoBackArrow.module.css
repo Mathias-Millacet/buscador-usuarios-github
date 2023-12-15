@@ -1,0 +1,8 @@
+.backArrowIcon {
+    width: 32px;
+    cursor: pointer;
+}
+
+.backArrowIcon:hover {
+    opacity: 0.4;
+}
